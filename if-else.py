@@ -5,7 +5,11 @@ if age <= 15:
 else:
     print("Mr. / Ms.")
     
+print("<---------- END PROGRAM ---------->")
+    
 if age >= 15:
     print("Mr. / Ms.")
 else:
     print("Mstr. / Miss")
+    
+print("<---------- END PROGRAM ---------->")
