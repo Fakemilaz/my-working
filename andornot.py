@@ -16,3 +16,6 @@ print(a < b or a == d) # True True = True
 
 # NOT
 print(a != d) # False
+
+z = (10>5) or (10==5)
+print(not z) # Let's Try
