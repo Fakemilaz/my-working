@@ -4576,17 +4576,17 @@ function library:init()
     
     -- Watermark
     do
-        if not Fxd_Hub_User then
-            getgenv().Fxd_Hub_User = {
+        if not IonHub_User then
+            getgenv().IonHub_User = {
                 UID = 0, 
-                User = "Users"
+                User = "admin"
             }
         end
         self.watermark = {
             objects = {};
             text = {
                 {self.cheatname, true},
-                {("%s (uid %s)"):format(Fxd_Hub_User.User, tostring(Fxd_Hub_User.UID)), true},
+                {("%s (uid %s)"):format(IonHub_User.User, tostring(IonHub_User.UID)), true},
                 {self.gamename, true},
                 {'0 fps', true},
                 {'0ms', true},
@@ -4754,7 +4754,7 @@ function library:CreateSettingsTab(menu)
 
     refreshConfigs()
 
-    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.RCTRL, callback = function()
+    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
         library:SetOpen(not library.open)
     end});
 
